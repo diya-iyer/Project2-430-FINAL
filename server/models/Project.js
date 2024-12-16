@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const TaskSchema = new mongoose.Schema({
   name: { type: String, required: true },
   progress: { type: String, enum: ['Not Started', 'In Progress', 'Completed'], default: 'Not Started' },
+  assignedTo: { type: String, default: null }, 
 });
 
 const ProjectSchema = new mongoose.Schema({
