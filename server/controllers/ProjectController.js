@@ -70,7 +70,6 @@ const updateTaskProgress = async (req, res) => {
   }
 };
 
-
 const getProjects = async (req, res) => {
   try {
     const projects = await Project.find();
@@ -94,7 +93,6 @@ const deleteProject = async (req, res) => {
     return res.status(500).json({ error: 'Failed to delete project' });
   }
 };
-
 
 const assignPersonToTask = async (req, res) => {
   const { projectId, taskId } = req.params;
@@ -124,6 +122,6 @@ module.exports = {
   updateTaskProgress,
   getProjects,
   projectPage,
-  assignPersonToTask, 
-  deleteProject
+  assignPersonToTask,
+  deleteProject,
 };

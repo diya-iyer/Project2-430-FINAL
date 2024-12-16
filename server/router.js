@@ -1,4 +1,3 @@
-const path = require('path'); // Add path module to serve static files
 const controllers = require('./controllers');
 const mid = require('./middleware');
 

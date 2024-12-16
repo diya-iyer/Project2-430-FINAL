@@ -71,7 +71,6 @@ const startServer = async () => {
       }
       console.log(`Server is running on port ${port}`);
     });
-
   } catch (err) {
     console.error('Error starting the server:', err);
     process.exit(1); // Exit if Redis fails or any other error occurs
