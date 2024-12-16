@@ -37,9 +37,9 @@ const startServer = async () => {
     // Security
     app.use(helmet());
 
-    // Static Assets & Favicon
+    // Static Assets & Favicon (with version query string)
     app.use('/assets', express.static(path.resolve(`${__dirname}/../hosted/`)));
-    app.use(favicon(path.resolve(__dirname, '../hosted/img/favicon.png')));
+    app.use(favicon(`${path.resolve(__dirname, '../hosted/img/favicon.png')}`));
 
     // Middleware
     app.use(compression());

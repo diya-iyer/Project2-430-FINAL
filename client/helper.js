@@ -1,6 +1,6 @@
 const handleError = (message) => {
   const errorMessageElement = document.getElementById('errorMessage');
-  const messageContainer = document.getElementById('domoMessage');
+  const messageContainer = document.getElementById('message');
 
   if (errorMessageElement && messageContainer) {
     errorMessageElement.textContent = message;
@@ -11,7 +11,7 @@ const handleError = (message) => {
 };
 
 const hideError = () => {
-  const messageContainer = document.getElementById('domoMessage');
+  const messageContainer = document.getElementById('message');
   if (messageContainer) {
     messageContainer.classList.add('hidden');
   }
@@ -72,7 +72,6 @@ const sendRequest = async (url, method = 'POST', data = null, handler = null) =>
   }
 };
 
-// Helper methods for specific HTTP verbs
 const sendPost = (url, data = null, handler = null) =>
   sendRequest(url, 'POST', data, handler);
 

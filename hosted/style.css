@@ -1,333 +1,287 @@
+/* General Reset */
 html, body {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
 }
 
-#logo {
-    height: 40px;
-    width: 40;
-    padding-top: 5px;
-    float:left;
-    border-radius: 8px;
+/* Header Styling */
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-nav {
-    width: 100%;
-    height: 50px;
-    background-color: #55acee;
-}
-
-nav:nth-child(1) {
-    padding-left: 25px;
-}
-
-.navlink {
-    padding: 5px;
-    padding-top: 12px;
-    padding-left: 20px;
-    color: white;
-    font-size: 1.3em;
-    float: left;
-}
-
-.navlink a, .navlink a:link, .navlink a:visited, .navlink a:hover, .navlink a:active {
-    color: white;
-    text-decoration: none;
-    padding: 5px;
-    border-radius: 4px;
-    background-color: #55acee;
-    transition: background-color 0.4s ease;
-}
-
-.navlink a:hover {
-    transition: background-color 0.8s ease;
-    background-color: #66bdff;
-}
-
-.domoForm {
-    border: 2px solid #338acc;
-    width: auto;
-    padding: 10px 20px;
-    background-color: #55acee;
-    border-radius: 4px;
-    margin: 20px auto;
+/* Create Project Section Styling */
+#createProject {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #3A86FF;
     color: white;
+    font-size: 1.5em;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.domoForm label {
-    font-size: 1.2em;
-    width: 100px;
-    text-align: right;
+#createProject:hover {
+    background-color: #2d6cdf;
 }
 
-.domoForm input[type="text"],
-.domoForm input[type="number"] {
-    padding: 5px 10px;
-    font-size: 1em;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    flex: 1;
-    outline: none;
-}
-
-.domoForm input[type="text"]:focus,
-.domoForm input[type="number"]:focus {
-    border-color: #338acc;
-    box-shadow: 0px 0px 4px rgba(51, 138, 204, 0.5);
-}
-
-.makeDomoSubmit {
-    padding: 8px 15px;
-    font-size: 1em;
-    background-color: #338acc;
+/* If #createProject is meant to be a button, you can add a pointer cursor */
+#createProject button {
+    background-color: #FF5C5C;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
     border: none;
-    border-radius: 4px;
-    color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.makeDomoSubmit:hover {
-    background-color: #286ba8;
+#createProject button:hover {
+    background-color: #f04e3f;
 }
 
-.makeDomoSubmit:link, .makeDomoSubmit:visited, .makeDomoSubmit:hover, .makeDomoSubmit:active {
+
+/* Header and Navigation */
+#logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+nav {
+    background-color: #3A86FF;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navlink {
+    padding: 10px;
+    font-size: 1.1em;
     color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
 }
 
-.makeDomoSubmit:hover {
-    transition: background-color 0.4s ease;
-    background-color: #338acc;
+.navlink:hover {
+    background-color: #2d6cdf;
 }
 
+/* Login Page */
 .mainForm {
-    height: 300px;
-    width: 350px;
-    margin: 0 auto;
-    padding-top: 350px;
-    font-size: 1.2em;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .mainForm h3 {
-    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    color: #333;
 }
 
 .mainForm label {
-    display: inline-block;
-    width: 100px;
-    margin-right: 10px;
-    text-align: right;
-    font-size: 1.2em;
+    display: block;
+    font-size: 1.1em;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.mainForm input[type="text"],
+.mainForm input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.mainForm input[type="text"]:focus,
+.mainForm input[type="password"]:focus {
+    border-color: #3A86FF;
+    box-shadow: 0px 0px 5px rgba(58, 134, 255, 0.5);
 }
 
 .formSubmit {
-    transition: background-color 0.4s ease;
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 14px;
+    background-color: #3A86FF;
+    color: white;
     font-size: 1.2em;
-    width: 100px;
-    background-color: #55acee;
-    border-radius: 2px;
-    border-color: #66acee;
-    padding: 3px 0px;
-    color: white;
-    text-decoration: none;
-}
-
-.formSubmit:link, .formSubmit:visited, .formSubmit:hover, .formSubmit:active {
-    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
 }
 
 .formSubmit:hover {
-    transition: background-color 0.4s ease;
-    background-color: #338acc;
+    background-color: #2d6cdf;
 }
 
-#user, #pass, #pass2 {
+/* Message and Error handling */
+#message {
+    display: none;
+    background-color: #ffcc00;
+    padding: 15px;
+    border-radius: 5px;
+    color: #333;
+    font-size: 1.2em;
     text-align: center;
-    font-size: 1.1em;
-    width: 180px;
-    border-radius: 6px;
+    margin: 20px;
 }
 
-#user:focus, #pass:focus, #pass2:focus {
-    outline: none;
-    box-shadow: 0px 0px 1px 1px #55acee;
+#errorMessage {
+    font-weight: bold;
+    color: #d9534f;
+}
+
+/* Project Management Page */
+#projects {
+    margin: 30px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#projects h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.project {
+    background-color: #ffffff;
+    border: 2px solid #d1d1d1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project h2 {
+    font-size: 1.8em;
+    color: #3A86FF;
+}
+
+.project button {
+    background-color: #FF5C5C;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project button:hover {
+    background-color: #f04e3f;
+}
+
+.project .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.project .task input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+.project .task button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #3A86FF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project .task button:hover {
+    background-color: #2d6cdf;
+}
+
+.taskForm {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.taskForm input {
+    padding: 8px;
+    font-size: 1.1em;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.taskForm button {
+    padding: 8px 16px;
+    background-color: #3A86FF;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.taskForm button:hover {
+    background-color: #2d6cdf;
+}
+
+/* Buttons and Other Elements */
+button, .formSubmit {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover, .formSubmit:hover {
+    opacity: 0.9;
+}
+
+/* General Containers */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .hidden {
     display: none;
-}
-
-#domoMessage {
-    top: 250px;
-    width: 250px;
-    height: 650px;
-    position: absolute;
-    z-index: 200;
-    right: 0px;
-    overflow: hidden;
-}
-
-#domoMessage h3 {
-    width: 200px;
-    position: absolute;
-    top: 0px;
-    left: 20px;
-}
-
-#speech {
-    height: 120px;
-    width: 250px;
-    z-index:300;
-}
-
-#errorMessage {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: red;
-    font-style: italic;
-}
-
-#domo {
-    z-index: 225;
-    margin-top: -20px;
-    margin-left: 135px;
-    height: 450px;
-    width: 300px;
-    -ms-transform: rotate(330deg);
-    -webkit-transform: rotate(330deg); 
-    transform: rotate(330deg);
-}
-
-#domos {
-    width: 40%;
-    min-width: 400px;
-    border: 2px solid #55acee;
-    border-radius: 4px;
-    margin: 0 auto;
-    margin-top: 100px;
-}
-
-.domo {
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    border: 2px solid #55acee;
-    border-radius: 4px;
-    background-color: #55acee;
-    padding: 10px;
-    min-height:60px;
-    overflow: hidden;
-}
-
-.domo:hover {
-    transition: border-color 0.2s ease-out;
-    border-color: rgba(255,255,255, 0.8);
-    transition: background-color 2.6s ease-out;
-    background-color: #66bfff;
-}
-
-img.domoFace {
-    margin-left: 25px;
-    margin-right: 10px;
-    height: 50px;
-    width: 50px;
-    border-radius: 4px;
-    margin-top:10px;
-    float:left;
-}
-
-h3.emptyDomo {
-    width: 400px;
-    font-size: 1.5em;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 18px;
-}
-
-h3.domoName {
-    float:left;
-    width: 200px;
-    font-weight: bold;
-    padding-left: 65px;
-    font-size: 1.5em;
-}
-
-h3.domoAge {
-    float:right;
-    text-align: left;
-    width: 100px;
-    font-weight: bold;
-    padding-right: 40px;
-    font-size: 1.5em;
-}
-
-.domo:first-child {
-    margin-top: 10px;
-}
-
-.domo:last-child {
-    margin-bottom:10px;
-}
-
-.domoForm .formRow {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.domoForm .formRow label {
-    margin-right: 10px;
-}
-
-.domoForm .makeDomoSubmit {
-    margin-top: 10px;
-}
-
-.domo {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f9f9f9;
-}
-
-.domo .domoFace {
-    width: 50px;
-    height: 50px;
-    margin-right: 15px;
-}
-
-.domo h3 {
-    margin: 0 10px 0 0;
-    font-size: 1rem;
-}
-
-.domo .deleteDomoButton {
-    margin-left: auto;
-    padding: 5px 10px;
-    border: none;
-    background-color: #ff5c5c;
-    color: #fff;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.domo .deleteDomoButton:hover {
-    background-color: #ff2c2c;
 }
